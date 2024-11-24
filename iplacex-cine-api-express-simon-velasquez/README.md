@@ -1,2 +1,2 @@
 # Cine API
-API REST para administrar actores y películas.
+API REST Express para administración de películas favoritas de empleados de IPLACEX
