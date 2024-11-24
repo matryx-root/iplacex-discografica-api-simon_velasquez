@@ -20,9 +20,8 @@ app.use('/api/actores', actorRoutes);
 app.use('/api/peliculas', peliculaRoutes);
 
 // Conexión a MongoDB
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Conectado a MongoDB Atlas'))
   .catch(err => console.error('Error al conectar a MongoDB:', err));
-
 // Inicio del servidor
 app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));

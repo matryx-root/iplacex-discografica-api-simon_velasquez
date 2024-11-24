@@ -1,13 +1,11 @@
 import Pelicula from '../models/pelicula.js';
 
-const postPelicula = async (req, res) => {
+export const postPelicula = async (req, res) => {
   try {
     const nuevaPelicula = new Pelicula(req.body);
     const peliculaGuardada = await nuevaPelicula.save();
     res.status(201).json(peliculaGuardada);
   } catch (err) {
-    res.status(400).send('Error al agregar película');
+    res.status(500).send('Error al agregar la película');
   }
 };
-
-export default postPelicula;

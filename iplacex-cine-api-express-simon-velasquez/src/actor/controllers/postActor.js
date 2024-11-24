@@ -1,5 +1,3 @@
-import Actor from '../models/actores.js';
-
 const postActor = async (req, res) => {
   try {
     const nuevoActor = new Actor(req.body);
@@ -10,4 +8,4 @@ const postActor = async (req, res) => {
   }
 };
 
-export default postActor;
+export default postActor; // Exportación default
